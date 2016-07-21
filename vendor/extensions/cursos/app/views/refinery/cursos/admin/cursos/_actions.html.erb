@@ -1,0 +1,20 @@
+<ul>
+  <% if ::Refinery::Cursos::Admin::CursosController.searchable? %>
+    <li>
+      <%= render '/refinery/admin/search', :url => refinery.cursos_admin_cursos_path %>
+    </li>
+  <% end %>
+  <li>
+    <%= action_label :add, refinery.new_cursos_admin_curso_path, t('.create_new') %>
+  </li>
+<% if !searching? && ::Refinery::Cursos::Admin::CursosController.sortable? && ::Refinery::Cursos::Curso.many? %>
+  <li>
+    <%= action_label :reorder,
+                     refinery.cursos_admin_cursos_path,
+                     t('.reorder', what:  "Cursos"), id: 'reorder_action'%>
+    <%= action_label :reorder_done,
+                     refinery.cursos_admin_cursos_path,
+                      t('.reorder_done', what: "Cursos"), id: 'reorder_action_done', class: 'hidden'%>
+  </li>
+<% end %>
+</ul>

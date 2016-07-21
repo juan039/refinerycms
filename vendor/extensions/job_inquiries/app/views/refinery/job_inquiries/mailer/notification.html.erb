@@ -1,0 +1,19 @@
+<%= t('.greeting') %>,<br/>
+<br/>
+<%= t('.you_recieved_new_job_inquiry') %><br/>
+<br/>
+<%= t('.job_inquiry_starts') %><br/>
+<br/>
+<%= t('.name', :default => t('activerecord.attributes.job_inquiry.name')) %>: <%= @job_inquiry.name %><br/>
+<%= t('.message', :default => t('activerecord.attributes.job_inquiry.message')) %>: 
+<%= @job_inquiry.message %>
+<%= t('.job_type', :default => t('activerecord.attributes.job_inquiry.job_type')) %>: <%= @job_inquiry.job_type %><br/>
+<%= t('.brochure', :default => t('activerecord.attributes.job_inquiry.brochure')) %>: <%= @job_inquiry.brochure %><br/>
+<%= t('.qualification', :default => t('activerecord.attributes.job_inquiry.qualification')) %>: <%= @job_inquiry.qualification %><br/>
+<br/>
+<%= t('.job_inquiry_ends') %><br/>
+<br/>
+<%= t('.closing_line') %>,<br/>
+<%= Refinery::Core.site_name %><br/>
+<br/>
+<%= t('.ps_html') %>

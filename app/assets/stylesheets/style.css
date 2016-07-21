@@ -1,0 +1,202 @@
+
+/*----------- First Container Fluid -----------*/
+body .container-fluid {
+     padding-right: 0px; 
+     padding-left: 0px;
+} 
+
+
+
+/*----------------- Navbar-----------------*/
+
+/* navbar */
+body > div.container-fluid > nav.navbar-default {
+    background-color: transparent;
+    border-color: transparent;
+    background: transparent;
+    /*back*/
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 0px;
+}
+/* title */
+body > div.container-fluid > nav.navbar-default .navbar-brand {
+    color: blue;
+}
+body > div.container-fluid > nav.navbar-default .navbar-brand:hover,
+body > div.container-fluid > nav.navbar-default .navbar-brand:focus {
+    color: #5E5E5E;
+}
+/* link - Se queda*/
+body > div.container-fluid > nav.navbar-default .navbar-nav > li > a {
+    color: black;
+}
+/*link hover*/
+body > div.container-fluid > nav.navbar-default .navbar-nav > li > a:hover{
+   color: red;
+}
+/*link seleccionado*/
+body > div.container-fluid > nav.navbar-default .navbar-nav > li > a:focus {
+    color: black;
+    border-bottom: 2px solid red; 
+    display: inline-block;  
+    line-height: 0px;
+    margin: 10px 0px -1px;
+}
+
+body > div.container-fluid > nav.navbar-default .navbar-nav > .active > a, 
+body > div.container-fluid > nav.navbar-default .navbar-nav > .active > a:hover, 
+body > div.container-fluid > nav.navbar-default .navbar-nav > .active > a:focus {
+    color: green;
+    background-color: green;
+}
+
+/*body > div.container-fluid > nav.navbar-default .navbar-nav > .open > a, 
+body > div.container-fluid > nav.navbar-default .navbar-nav > .open > a:hover, 
+body > div.container-fluid > nav.navbar-default .navbar-nav > .open > a:focus {
+    color: green;
+    background-color: green;
+}*/
+/* Flechita */
+body > div.container-fluid > nav.navbar-default .navbar-nav > .dropdown > a .caret {
+    border-top-color: red;
+    border-bottom-color: red;
+}
+body > div.container-fluid > nav.navbar-default .navbar-nav > .dropdown > a:hover .caret,
+body > div.container-fluid > nav.navbar-default .navbar-nav > .dropdown > a:focus .caret {
+    border-top-color: red;
+    border-bottom-color: red;
+}
+body > div.container-fluid > nav.navbar-default .navbar-nav > .open > a .caret, 
+body > div.container-fluid > nav.navbar-default .navbar-nav > .open > a:hover .caret, 
+body > div.container-fluid > nav.navbar-default .navbar-nav > .open > a:focus .caret {
+    border-top-color: red;
+    border-bottom-color: red;
+}
+/* mobile version */
+body > div.container-fluid > nav.navbar-default .navbar-toggle {
+    border-color: #DDD;
+}
+body > div.container-fluid > nav.navbar-default .navbar-toggle:hover,
+body > div.container-fluid > nav.navbar-default .navbar-toggle:focus {
+    background-color: #DDD;
+}
+body > div.container-fluid > nav.navbar-default .navbar-toggle .icon-bar {
+    background-color: #CCC;
+}
+@media (max-width: 767px) {
+    body > div.container-fluid > nav.navbar-default .navbar-nav .open .dropdown-menu > li > a {
+        color: #777;
+    }
+    body > div.container-fluid > nav.navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+    body > div.container-fluid > nav.navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+        color: #333;
+    }
+
+   body > div.container-fluid > nav.navbar-default .navbar-nav > li > a:focus {
+   color: black;
+   border-bottom: 2px solid red;   
+   line-height: 0px;
+   display: inline-block;
+   margin: 10px 0px -1px;
+   }
+   /*-----------Alto del Carrousel - Para Movil-----------*/
+   #carousel-example-generic, #carousel-example-generic > #carrousel-row {
+      height: 15em;
+   }
+}
+
+/*-----------LAOS Logo-----------*/
+#laos_logo {
+   height: 3em;
+   position: relative;
+   bottom: 1em;
+}
+
+/*-----------LAOS Nombre-----------*/
+#laos_nombre {
+   margin-top: 10px;
+}
+
+/*-----------Alto del Carrousel-----------*/
+
+#carousel-example-generic > #carrousel-row {
+   height: 400px;
+}
+
+/*----------- Barra estadisticas-----------*/
+.row-background{
+   background-color: rgba(40,38,66,0.05);
+}
+
+/*Centra Circulos en el Div*/
+body > div.row.row-background > div:nth-child(-n+4){
+   text-align: center;
+   padding-top: 1em;
+}
+
+.glyphicon-circle{
+   width: 5em;
+   height: 5em;
+   border-radius: 40px;
+   background-color: white;
+   border: 2px solid #EE1214;
+   display: inline-block;
+   padding-top: 1.2em;
+   text-align: center;
+}
+
+.glyphicon-size {
+   font-size: 2.5em;
+   color: #665F63;
+   
+}
+
+.statistics-text {
+   color: black;
+   font-size: 1.6em;
+}
+
+
+
+
+/*----------- Cuadros de Servicios-----------*/
+
+.contain {
+   padding: 2em;
+}
+/*Botones*/
+body > div.contain > div > div:nth-child(-n+3) > div > div > p:nth-child(3) > a {
+   width: 90px;
+   height: 35px;
+   background-color: #FF292A;
+   color: white;
+   border-radius: 33px;
+}
+
+body > div.contain > div > div:nth-child(-n+3) > div > div > p:nth-child(3) {
+   text-align: center;
+}
+
+/*----------- Jumbotron-----------*/
+body > div.jumbotron , body > div.jumbotron > div > div{
+   background-color: #2A2C31;
+   color: white;
+   padding-top: 1em;
+   padding-bottom: 3em;
+}
+@media screen and (min-width: 768px)
+.jumbotron {
+   background-color: #2A2C31;
+    /* padding-top: 48px; */
+    /* padding-bottom: 48px; */
+
+}
+
+body > div.jumbotron > div > div > p:nth-child(3) > a {
+   width: 130px;
+   height: 45px;
+   background-color: #FF292A;
+   color: white;
+   border-radius: 33px;
+}

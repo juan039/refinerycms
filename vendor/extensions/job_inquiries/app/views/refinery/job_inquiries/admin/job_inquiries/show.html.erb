@@ -1,0 +1,81 @@
+<div id='records'>
+  <h2><%= t('.job_inquiry') %></h2>
+  <table id='job_inquiry' class='job_inquiry'>
+      <tr>
+        <td>
+          <strong>
+            <%= t('.name', :default => t('activerecord.attributes.job_inquiry.name')) %>
+          </strong>
+        </td>
+        <td>
+          <%= @job_inquiry.name %>
+        </td>
+      </tr>
+      <tr>
+        <td valign='top'>
+          <strong>
+            <%= t('.message', :default => t('activerecord.attributes.job_inquiry.message')) %>
+          </strong>
+        </td>
+        <td>
+          <p style='margin-top: 0px'>
+            <% @job_inquiry.message.to_s.gsub("\r\n\r\n", "\r\n").split("\r\n").each_with_index do |sentence, index| %>
+              <%=raw "</p><p>" unless index == 0 %>
+              <%= sentence %>
+            <% end %>
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <strong>
+            <%= t('.job_type', :default => t('activerecord.attributes.job_inquiry.job_type')) %>
+          </strong>
+        </td>
+        <td>
+          <%= @job_inquiry.job_type %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <strong>
+            <%= t('.brochure', :default => t('activerecord.attributes.job_inquiry.brochure')) %>
+          </strong>
+        </td>
+        <td>
+          <%= @job_inquiry.brochure %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <strong>
+            <%= t('.qualification', :default => t('activerecord.attributes.job_inquiry.qualification')) %>
+          </strong>
+        </td>
+        <td>
+          <%= @job_inquiry.qualification %>
+        </td>
+      </tr>
+  </table>
+</div>
+<div id='actions'>
+  <h2><%= t('.details')%></h2>
+  <p>
+    <strong><%= t('.age') %>:</strong> <%= time_ago_in_words(@job_inquiry.created_at) %>
+  </p>
+  <h2><%= t('.actions') %></h2>
+  <ul>
+    <li>
+    <%= link_to t('.back_to_all_job_inquiries'), refinery.job_inquiries_admin_job_inquiries_path,
+                   :class => "back_icon" %>
+    </li>
+    <li>
+      <%= link_to t('delete_job_inquiry', :scope => 'refinery.job_inquiries.admin.job_inquiries.job_inquiry'),
+                  refinery.job_inquiries_admin_job_inquiry_path(@job_inquiry),
+                  :class => 'delete_icon no-tooltip confirm-delete',
+                  :title => t('delete_job_inquiry', :scope => 'refinery.job_inquiries.admin.job_inquiries.job_inquiry'),
+                  :'data-confirm' => t('message', :scope => 'refinery.admin.delete', :title => @job_inquiry.name),
+                  :'data-method' => "delete" %>
+    </li>
+  </ul>
+</div>

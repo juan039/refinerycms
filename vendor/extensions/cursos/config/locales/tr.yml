@@ -1,0 +1,31 @@
+tr:
+  refinery:
+    plugins:
+      cursos:
+        title: Cursos
+    cursos:
+      admin:
+        cursos:
+          actions:
+            create_new: Yeni Ekle Curso
+            reorder: Tekrar sirala Cursos
+            reorder_done: Tekrar siralama tamamlandiCursos
+          records:
+            title: Cursos
+            sorry_no_results: Uzgunum! Herhangi bir sonuc bulunamadi.
+            no_items_yet: Herhangi bir Cursos yok henuz.  Tikla "Yeni Ekle Curso" eklemek senin ilk curso.
+          curso:
+            view_live_html: Bunu canlu curso goruntule <br/><em>(yeni bir pencerede acar)</em>
+            edit: Bunu Duzenle curso
+            delete: Bunu Sil curso sonsuza dek
+      cursos:
+        show:
+          other: Diger Cursos
+  activerecord:
+    attributes:
+      'refinery/cursos/curso':
+        name: Name
+        start_date: Start Date
+        price: Price
+        photo: Photo
+        description: Description

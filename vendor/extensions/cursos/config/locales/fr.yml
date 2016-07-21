@@ -1,0 +1,31 @@
+fr:
+  refinery:
+    plugins:
+      cursos:
+        title: Cursos
+    cursos:
+      admin:
+        cursos:
+          actions:
+            create_new: Créer un(e) nouve(au/l/lle) Curso
+            reorder: Réordonner les Cursos
+            reorder_done: Fin de réordonnancement des Cursos
+          records:
+            title: Cursos
+            sorry_no_results: "Désolé ! Aucun résultat."
+            no_items_yet: 'Il n''y a actuellement aucun(e) Curso. Cliquer sur "Créer un(e) nouve(au/l/lle) Curso" pour créer votre premi(er/ère) curso.'
+          curso:
+            view_live_html: Voir ce(t/tte) curso <br/><em>(Ouvre une nouvelle fenêtre)</em>
+            edit: Modifier ce(t/tte) curso
+            delete: Supprimer définitivement ce(t/tte) curso
+      cursos:
+        show:
+          other: Autres Cursos
+  activerecord:
+    attributes:
+      'refinery/cursos/curso':
+        name: Name
+        start_date: Start Date
+        price: Price
+        photo: Photo
+        description: Description

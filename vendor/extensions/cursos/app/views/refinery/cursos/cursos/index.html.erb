@@ -1,0 +1,29 @@
+<div class="container">
+	<div class="row">
+		<% @cursos.each do |curso| %>
+			<div class="col-xs-4">
+				<div class="row center">
+					<%= image_fu curso.photo, "200x100", class: "center-block" %>
+				</div>
+				<div class="row text-center center-block">
+					<%= link_to curso.name, refinery.cursos_curso_path(curso) %>
+				</div>
+			</div>
+			
+		<% end %>
+	</div>
+</div>
+
+
+
+<% content_for :body do %>
+  <ul id="cursos">
+    <% @cursos.each do |curso| %>
+      <li>
+        <%= link_to curso.name, refinery.cursos_curso_path(curso) %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= render '/refinery/content_page' %>

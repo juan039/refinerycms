@@ -1,0 +1,33 @@
+zh-CN:
+  refinery:
+    plugins:
+      cursos:
+        title: Cursos
+    cursos:
+      admin:
+        cursos:
+          actions:
+            create_new: 建立新的 Curso
+            reorder: 对 Cursos 重新排序
+            reorder_done: 对 Cursos 的重新排序结束
+          records:
+            title: Cursos
+            sorry_no_results: 对不起，未找到结果。 #Sorry! There are no results found.
+
+            # There are no Cursos yet. Click "Add New Curso" to add your first curso.
+            no_items_yet: 目前没有 Cursos . 点击 "Add New Curso" 创建一个curso.
+          curso:
+            view_live_html: 查看 curso 的最新内容.<br/><em>(新窗口中打开)</em>
+            edit: 编辑 curso
+            delete: 永久删除 curso
+      cursos:
+        show:
+          other: 其他 Cursos
+  activerecord:
+    attributes:
+      'refinery/cursos/curso':
+        name: Name
+        start_date: Start Date
+        price: Price
+        photo: Photo
+        description: Description

@@ -1,0 +1,31 @@
+sk:
+  refinery:
+    plugins:
+      cursos:
+        title: Cursos
+    cursos:
+      admin:
+        cursos:
+          actions:
+            create_new: Pridať Curso
+            reorder: Preusporiadať Cursos
+            reorder_done: Koniec radenia Cursos
+          records:
+            title: Cursos
+            sorry_no_results: Ľutujeme, ale neboli nájdené žiadne výsledky.
+            no_items_yet: Nie sú vytvorené žiadne Cursos. Kliknite na "Pridať Curso" pre pridanie prvého curso.
+          curso:
+            view_live_html: Zobraziť náhľad curso<br/><em>(otvorí sa v novom okne)</em>
+            edit: Upraviť curso
+            delete: Zmazať curso
+      cursos:
+        show:
+          other: Daľšie Cursos
+  activerecord:
+    attributes:
+      'refinery/cursos/curso':
+        name: Name
+        start_date: Start Date
+        price: Price
+        photo: Photo
+        description: Description

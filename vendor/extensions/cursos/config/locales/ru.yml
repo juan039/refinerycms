@@ -1,0 +1,31 @@
+ru:
+  refinery:
+    plugins:
+      cursos:
+        title: Cursos
+    cursos:
+      admin:
+        cursos:
+          actions:
+            create_new: Добавить Curso
+            reorder: Изменить порядок Cursos
+            reorder_done: Закончить изменять порядок Cursos
+          records:
+            title: Cursos
+            sorry_no_results: "Извините, поиск не дал результатов."
+            no_items_yet: Записей "Cursos" не найдено. Нажмите "Добавить Curso" чтобы создать curso.
+          curso:
+            view_live_html: Просмотреть curso вживую <br/><em>(в новом окне)</em>
+            edit: Редактировать curso
+            delete: Удалить curso навсегда
+      cursos:
+        show:
+          other: Другие Cursos
+  activerecord:
+    attributes:
+      'refinery/cursos/curso':
+        name: Name
+        start_date: Start Date
+        price: Price
+        photo: Photo
+        description: Description

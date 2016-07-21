@@ -1,0 +1,31 @@
+en:
+  refinery:
+    plugins:
+      cursos:
+        title: Cursos
+    cursos:
+      admin:
+        cursos:
+          actions:
+            create_new: Add New Curso
+            reorder: Reorder Cursos
+            reorder_done: Done Reordering Cursos
+          records:
+            title: Cursos
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Cursos yet. Click "Add New Curso" to add your first curso.
+          curso:
+            view_live_html: View this curso live <br/><em>(opens in a new window)</em>
+            edit: Edit this curso
+            delete: Remove this curso forever
+      cursos:
+        show:
+          other: Other Cursos
+  activerecord:
+    attributes:
+      'refinery/cursos/curso':
+        name: Name
+        start_date: Start Date
+        price: Price
+        photo: Photo
+        description: Description

@@ -1,0 +1,31 @@
+nb:
+  refinery:
+    plugins:
+      cursos:
+        title: Cursos
+    cursos:
+      admin:
+        cursos:
+          actions:
+            create_new: Lag en ny Curso
+            reorder: Endre rekkefølgen på Cursos
+            reorder_done: Ferdig å endre rekkefølgen Cursos
+          records:
+            title: Cursos
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Cursos enda. Klikk på "Lag en ny Curso" for å legge til din første curso.
+          curso:
+            view_live_html: Vis hvordan denne curso ser ut offentlig <br/><em>(åpner i et nytt vindu)</em>
+            edit: Rediger denne curso
+            delete: Fjern denne curso permanent
+      cursos:
+        show:
+          other: Andre Cursos
+  activerecord:
+    attributes:
+      'refinery/cursos/curso':
+        name: Name
+        start_date: Start Date
+        price: Price
+        photo: Photo
+        description: Description

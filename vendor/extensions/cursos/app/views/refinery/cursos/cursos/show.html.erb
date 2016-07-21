@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row">
+    <div id="body_content">
+      <div id="body">
+        <div id="curso">
+          <%= image_fu @curso.photo, "500x500", class: "image-align-left" %>
+          <h1><%= @curso.name %></h1>
+          <p>
+            <b>Price:</b> <%= number_to_currency(@curso.price) %>
+          </p>
+          <p>
+            <b>Manufacture Date:</b> <%= @curso.start_date.year %>
+          </p>
+          <%= raw @curso.description %>
+          <p class="back"><%= link_to "Back to cursos", refinery.cursos_cursos_path %></p>
+        </div>
+      </div>
+    </div>    
+
+  </div>
+
+</div>

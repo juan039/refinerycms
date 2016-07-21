@@ -1,0 +1,117 @@
+<!-- Se debe poner el nombre del Slideshow creado en refinery, en este caso Guardias -->
+<% main_slideshow = Refinery::ImageSlideshows::ImageSlideshow.find_by_title('Guardias') %>
+
+<div class="container-fluid">
+<!-- Open Carrousel -->
+	<div class="row" >
+    	<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+        <!-- Wrapper for slides -->
+	        <div class="carousel-inner" role="listbox" id="carrousel-row">
+
+			    <% main_slideshow.image_slides.each_with_index do |image_slide,index| %>
+
+		       	<!-- <%= link_to image_slide.link_url do %> -->
+				<!-- Este codigo es para que solo la primera imagen de la lista tenga la clase active -->
+        <%if index == 0%>
+					<div class="item active">
+				<%else%>
+					<div class="item">
+				<%end%>
+
+		         <%= image_tag image_slide.image.url, :alt => image_slide.title, :title => image_slide.caption %>
+		        <!--<% end %>-->
+		        	</div>
+		        <% end %> 
+	        </div>
+	        <!-- Controls -->
+	        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+	          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+	          <span class="sr-only">Previous</span>
+	        </a>
+	        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+	          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+	          <span class="sr-only">Next</span>
+	        </a>    
+   		</div> <!-- Close Carrousel Row -->
+	</div>
+</div>
+
+<!-- Open Franja de datos Estadisticos -->
+   <div class="row row-background">
+        <div class="col-xs-12 col-sm-3 col-md-3">
+            <div class="glyphicon-circle ">
+               <span class="glyphicon glyphicon-user glyphicon-size" aria-hidden="true"></span>
+            </div>
+            <p class="statistics-text">20 anos de experiencia</p>
+        </div>
+        <div class="col-xs-12 col-sm-3 col-md-3">
+            <div class="glyphicon-circle ">
+               <span class="glyphicon glyphicon-home glyphicon-size" aria-hidden="true"></span>
+            </div>
+            <p class="statistics-text">1200 guardas a su alcance</p>
+        </div>
+        <div class="col-xs-12 col-sm-3 col-md-3">
+            <div class="glyphicon-circle ">
+               <span class="glyphicon glyphicon-leaf glyphicon-size" aria-hidden="true"></span>
+            </div>
+            <p class="statistics-text">10 regiones del pais</p>
+        </div>
+        <div class="col-xs-12 col-sm-3 col-md-3">
+            <div class="glyphicon-circle ">
+               <span class="glyphicon glyphicon-pencil glyphicon-size" aria-hidden="true"></span>
+            </div>
+            <p class="statistics-text">Texto y mas texto aqui</p>
+        </div>
+   </div><!-- Close Statistics Row -->
+   
+   <!-- Open Servicios -->
+   <div class="contain">
+      <div class="row">
+         <div class="col-sm-4 col-md-4">
+            <div class="thumbnail background-thumbnail">
+               <img src="..." alt="...">
+               <div class="caption">
+               <h3>Vigilancia Fija</h3>
+               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique hic illum, dolore maxime asperiores velit sit cum dolorum ratione culpa fuga, alias dolorem corporis obcaecati quae officia. Distinctio, labore, veniam?</p>
+               <p><a href="#" class="btn button-red" role="button">Button</a> </p>
+            </div>
+          </div>
+         </div>
+         <div class="col-sm-4 col-md-4">
+            <div class="thumbnail">
+               <img src="..." alt="...">
+               <div class="caption">
+               <h3>Vigilancia Movil</h3>
+               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique hic illum, dolore maxime asperiores velit sit cum dolorum ratione culpa fuga, alias dolorem corporis obcaecati quae officia. Distinctio, labore, veniam?</p>
+               <p><a href="#" class="btn button-red" role="button">Button</a> </p>
+            </div>
+          </div>
+         </div>
+         <div class="col-sm-4 col-md-4">
+            <div class="thumbnail">
+               <img src="..." alt="...">
+               <div class="caption">
+               <h3>Escoltas</h3>
+               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique hic illum, dolore maxime asperiores velit sit cum dolorum ratione culpa fuga, alias dolorem corporis obcaecati quae officia. Distinctio, labore, veniam?</p>
+               <p><a href="#" class="btn button-red" role="button">Button</a> </p>
+            </div>
+          </div>
+         </div>
+      </div>
+   </div><!-- Close Contain Servicios -->
+
+   <!-- Open Mensaje -->
+   <div class="jumbotron">
+        <div class="container">
+            <div class="jumbotron">
+              <h1>Protegemos tu hogar y a tu Familia!</h1>
+              <p> sit cum dolorum ratione culpa fuga, alias dolorem corporis obcaecati quae officia. Distinctio</p>
+              <p><a class="btn button-red btn-lg" href="#" role="button">Escribanos</a></p>
+            </div>        sit cum dolorum ratione culpa fuga, alias dolorem corporis obcaecati quae officia. Distinctio
+        </div>
+   </div><!-- Close Mensaje -->
+
+<%= render '/refinery/content_page' %>
+
+<% @items = Refinery::News::Item.latest(5) %>
+<%= render :partial => '/refinery/news/items/recent_posts' %>
